@@ -1,0 +1,283 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+	<!-- banner -->
+	<div class="main-banner-2">
+
+	</div>
+	<!-- //banner -->
+	<!-- page details -->
+	<div class="breadcrumb-agile bg-light py-2">
+		<ol class="breadcrumb bg-light m-0">
+			<li class="breadcrumb-item">
+				<a href="/">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">Menu</li>
+		</ol>
+	</div>
+	<!-- //page details -->
+
+	<!-- menu -->
+	<section class="portfolio py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title-section text-center mb-md-5 mb-4">
+				<h3 class="w3ls-title mb-3">Our <span>Menu</span></h3>
+				<p class="titile-para-text mx-auto">Inventore veritatis et quasi architecto beatae vitae dicta sunt
+					explicabo.Nemo
+					enim totam rem aperiam.</p>
+			</div>
+			<div class="row mt-4">
+				<div class="col-md-4">
+					<div class="gallery-demo">
+						<a href="#gal1">
+							<img src="{{url_for('static', filename='images/blog1.jpg')}}" alt=" " class="img-fluid" />
+							<h4 class="p-mask">French Burger - <span>{{price1}}</span></h4>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-md-0 mt-4">
+					<div class="gallery-demo">
+						<a href="#gal2">
+							<img src="{{url_for('static', filename='images/blog2.jpg')}}" alt=" " class="img-fluid" />
+							<h4 class="p-mask">Veg Muffin - <span>{{price2}}</span></h4>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-md-0 mt-4">
+					<div class="gallery-demo">
+						<a href="#gal3">
+							<img src="{{url_for('static', filename='images/blog3.jpg')}}" alt=" " class="img-fluid" />
+							<h4 class="p-mask">Brioche - <span>{{price3}}</span></h4>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-md-5">
+				<div class="col-md-4 mt-md-0 mt-4">
+					<div class="gallery-demo">
+						<a href="#gal4">
+							<img src="{{url_for('static', filename='images/g1.jpg')}}" alt=" " class="img-fluid" />
+							<h4 class="p-mask">Cheese Burger - <span>{{price4}}</span></h4>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-md-0 mt-4">
+					<div class="gallery-demo">
+						<a href="#gal5">
+							<img src="{{url_for('static', filename='images/g2.jpg')}}" alt=" " class="img-fluid" />
+							<h4 class="p-mask">Chicken Burger - <span>{{price5}}</span></h4>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-md-0 mt-4">
+					<div class="gallery-demo">
+						<a href="#gal6">
+							<img src="{{url_for('static', filename='images/g3.jpg')}}" alt=" " class="img-fluid" />
+							<h4 class="p-mask">Veg Burger - <span id="p1">{{price6}}</span></h4>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- gallery model-->
+	<!-- gallery popup 1 -->
+	<div id="gal1" class="pop-overlay">
+		<div class="popup">
+			<img class="img-fluid" src="{{url_for('static', filename='images/blog1.jpg')}}" alt=" ">
+			<h4 class="p-mask">French Burger - <span>{{price1}}</span></h4>
+			<a href="#add_to_cart1" class="button-w3ls active mt-3">Order Now
+				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+			</a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+
+<!-- Second gallery pop up adding to cart-->
+    <div id="add_to_cart1" class="pop-overlay">
+		<div class="popup">
+			<!--<img class="img-fluid" src="{{url_for('static', filename='images/cart.jpg')}}" alt="">-->
+			<h4 class="p-mask">Added to cart - R <span id='price'>15</span></h4>
+			<a href="#gallery" class="button-w3ls active mt-3"><span class="fa fa-caret-left ml-1" aria-hidden="true"></span> Order Again
+			</a>
+            
+            <a href="/login" class="button-w3ls active mt-3">Check Out<span class="fa fa-caret-right ml-1" aria-hidden="true"></span></a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+<!--// Second gallery pop up ends -->
+
+	<!-- //gallery popup 1 -->
+	<!-- gallery popup 2 -->
+	<div id="gal2" class="pop-overlay">
+		<div class="popup">
+			<img class="img-fluid" src="{{url_for('static', filename='images/blog2.jpg')}}" alt=" ">
+			<h4 class="p-mask">Veg Muffin - <span>{{price2}}</span></h4>
+			<a href="#add_to_cart2" class="button-w3ls active mt-3">Order Now
+				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+			</a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+
+<!-- Second gallery pop up adding to cart-->
+    <div id="add_to_cart2" class="pop-overlay">
+		<div class="popup">
+			<!--<img class="img-fluid" src="{{url_for('static', filename='images/cart.jpg')}}" alt="">-->
+			<h4 class="p-mask">Added to cart - <span id='price'>14</span></h4>
+			<a href="#gallery" class="button-w3ls active mt-3"><span class="fa fa-caret-left ml-1" aria-hidden="true"></span> Order Again
+			</a>
+            
+            <a href="/login" class="button-w3ls active mt-3">Check Out<span class="fa fa-caret-right ml-1" aria-hidden="true"></span></a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+<!--// Second gallery pop up ends -->
+
+	<!-- //gallery popup 2 -->
+	<!-- gallery popup 3 -->
+	<div id="gal3" class="pop-overlay">
+		<div class="popup">
+			<img class="img-fluid" src="{{url_for('static', filename='images/blog3.jpg')}}" alt="">
+			<h4 class="p-mask">Brioche - <span id="p3">{{price3}}</span></h4>
+			<a href="#add_to_cart3" class="button-w3ls active mt-3">Order Now
+				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+			</a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+
+<!-- Second gallery pop up adding to cart-->
+    <div id="add_to_cart3" class="pop-overlay">
+		<div class="popup">
+			<!--<img class="img-fluid" src="{{url_for('static', filename='images/cart.jpg')}}" alt="">-->
+			<h4 class="p-mask">Added to cart - R <span id='price'>48</span></h4>
+			<a href="#gallery" class="button-w3ls active mt-3"><span class="fa fa-caret-left ml-1" aria-hidden="true"></span> Order Again
+			</a>
+            
+            <a href="/login" class="button-w3ls active mt-3">Check Out<span class="fa fa-caret-right ml-1" aria-hidden="true"></span></a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+<!--// Second gallery pop up ends -->
+
+	<!-- //gallery popup 3 -->
+	<!-- gallery popup 4 -->
+	<div id="gal4" class="pop-overlay">
+		<div class="popup">
+			<img class="img-fluid" src="{{url_for('static', filename='images/g1.jpg')}}" alt="">
+			<h4 class="p-mask">Cheese Burger - <span id="p4">{{price4}}</span></h4>
+			<a id="b4" href="#add_to_cart4" class="button-w3ls active mt-3">Order Now
+				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+			</a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+
+<!-- Second gallery pop up adding to cart-->
+    <div id="add_to_cart4" class="pop-overlay">
+		<div class="popup">
+			<!--<img class="img-fluid" src="{{url_for('static', filename='images/cart.jpg')}}" alt="">-->
+			<h4 class="p-mask">Added to cart - <span id='price'>23</span></h4>
+			<a href="#gallery" class="button-w3ls active mt-3"><span class="fa fa-caret-left ml-1" aria-hidden="true"></span> Order Again
+			</a>
+            
+            <a href="/login" class="button-w3ls active mt-3">Check Out<span class="fa fa-caret-right ml-1" aria-hidden="true"></span></a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+<!--// Second gallery pop up ends -->
+
+	<!-- //gallery popup 4 -->
+	<!-- gallery popup 5 -->
+	<div id="gal5" class="pop-overlay">
+		<div class="popup">
+			<img class="img-fluid" src="{{url_for('static', filename='images/g2.jpg')}}" alt="">
+			<h4 class="p-mask">Chicken Burger - <span>{{total_price}}</span></h4>
+			<a href="#add_to_cart5" class="button-w3ls active mt-3">Order Now
+				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+			</a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+
+<!-- Second gallery pop up adding to cart-->
+    <div id="add_to_cart5" class="pop-overlay">
+		<div class="popup">
+			<!--<img class="img-fluid" src="{{url_for('static', filename='images/cart.jpg')}}" alt="">-->
+			<h4 class="p-mask">Added to cart - R <span id='price'>34</span></h4>
+			<a href="#gallery" class="button-w3ls active mt-3"><span class="fa fa-caret-left ml-1" aria-hidden="true"></span> Order Again
+			</a>
+            
+            <a href="/login" class="button-w3ls active mt-3">Check Out<span class="fa fa-caret-right ml-1" aria-hidden="true"></span></a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+<!--// Second gallery pop up ends -->
+
+	<!-- //gallery popup 5 -->
+	<!-- gallery popup 6 -->
+	<div id="gal6" class="pop-overlay">
+		<div class="popup">
+			<img class="img-fluid" src="{{url_for('static', filename='images/g3.jpg')}}" alt="">
+			<h4 class="p-mask">Veg Burger - <span id="p6">{{price6}}</span></h4>
+			<a id="b6" href="#add_to_cart6" class="button-w3ls active mt-3">Order Now
+				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+			</a>
+			<a class="close" href="#gallery">×</a>
+            
+<!--<script> 
+    let price = '{{price6}}';
+    function add_total(price) {
+        price =+ price
+        alert
+    }
+}
+</script>-->
+<!--<script>
+alert('this works');
+console.log('fuck yeah');
+</script>-->
+<!--<script> 
+let tot = [];
+   let calcTotal = document.querySelectorAll(".button-w3ls");
+   for (let i = 0; i < calcTotal.length; i++){
+	calcTotal[i].addEventListener("click", function(){
+		console.log(calcTotal[i]);
+	   let cartTotal = document.querySelectorAll('#price');
+			tot.push(parseInt(cartTotal[i].textContent));
+			console.log(cartTotal.textContent);
+			console.log('arr ' + tot);
+			cartTotal.textContent = tot.reduce(function(x, y){
+				return x + y;
+	   }, 0);
+	   
+
+   });
+   };
+   
+</script>-->
+            
+		</div>
+	</div>
+    
+<!-- Second gallery pop up adding to cart-->
+    <div id="add_to_cart6" class="pop-overlay">
+		<div class="popup">
+			<img class="img-fluid" src="{{url_for('static', filename='images/cart.jpg')}}" alt="">
+			<h4 class="p-mask">Added to cart - <span id="p7">{{price6}}</span></h4>
+			<a href="#gallery" class="button-w3ls active mt-3"><span class="fa fa-caret-left ml-1" aria-hidden="true"></span> Order Again
+			</a>
+           
+            <a href="/login" class="button-w3ls active mt-3">Check Out<span class="fa fa-caret-right ml-1" aria-hidden="true"></span></a>
+			<a class="close" href="#gallery">×</a>
+		</div>
+	</div>
+<!--// Second gallery pop up ends -->
+
+	<!-- //gallery popup 6 -->
+	<!-- //menu -->
+
+	<script src="app.js"></script>
+{% endblock %}

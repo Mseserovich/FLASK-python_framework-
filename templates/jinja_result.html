@@ -1,0 +1,21 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+<table border = 1>
+         <thead>
+            <td>name</td>
+             <td>email</td>
+            <td>password</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["email"]}}</td>
+               <td> {{ row["password"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+{% endblock %}
